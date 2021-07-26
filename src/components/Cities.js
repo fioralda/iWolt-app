@@ -57,13 +57,13 @@ const Cities = () => {
       <Flex justifyContent='flex-end' w='full'>
         <Flex direction='column' w='full'>
           <Tabs variant='enclosed'>
-            <Flex justifyContent='flex-end' pr='10vw'>
+            <Flex justifyContent='center' pt={`${show ? '52' : '40'}`}>
               <TabList>
                 <Tab onClick={() => setShow(false)}>Greece</Tab>
                 <Tab onClick={() => setShow(true)}>All countries</Tab>
               </TabList>
             </Flex>
-            <Flex justifyContent='flex-end' pr='5vw' pt='5vh'>
+            <Flex justifyContent='center'>
               {!show && (
                 <Flex justifyContent='space-between'>
                   <SimpleGrid columns={2} spacing={6}>

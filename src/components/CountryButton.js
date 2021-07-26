@@ -5,8 +5,10 @@ const CountryButton = ({ country }) => {
   return (
     <Button
       rightIcon={<ArrowForwardIcon />}
-      colorScheme='teal'
-      variant='outline'
+      colorScheme='whiteAlpha'
+      variant='solid'
+      border='1px'
+      textColor='black'
     >
       {country}
     </Button>

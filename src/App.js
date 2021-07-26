@@ -13,7 +13,7 @@ function App() {
   return (
     <Stack w='full'>
       <Flex w='full' px='250'>
-        <Image src={Logo} alt='Logo' w='100' h='100' />
+        <Image src={Logo} alt='Logo' w='100' h='100' pl='20' pb='10px'/>
         <NavBar />
       </Flex>
       <Flex

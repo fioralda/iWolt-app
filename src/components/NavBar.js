@@ -24,7 +24,7 @@ const NavBar = () => {
     <Flex alignItems='center' w='100vw' justifyContent='space-around' px='100'>
       <LogIn isOpen={login.isOpen} onClose={login.onClose} />
       <SignUp isOpen={signup.isOpen} onClose={signup.onClose} />
-      <InputGroup w='20vw' ml='80'>
+      <InputGroup w='20vw' ml='150'>
         <InputRightElement
           pointerEvents='none'
           children={
@@ -33,7 +33,7 @@ const NavBar = () => {
             </Flex>
           }
         />
-        <Input type='text' placeholder='Search' bgColor='white' />
+        <Input type='text' placeholder='Search' bgColor='white'/>
       </InputGroup>
       <Stack direction='row' spacing='4' ml='150' pt='-1.5'>
         <Button variant='ghost' onClick={login.onOpen}>
