@@ -7,6 +7,7 @@ import InfoPiece from './components/InfoPiece';
 import AnimationText from './components/AnimationText';
 
 import { Image, Box, Flex, Spacer, Stack } from '@chakra-ui/react';
+import DownloadUs from './components/Modals/DownloadUs';
 
 function App() {
   return (
@@ -42,6 +43,7 @@ function App() {
       </Flex>
       <Cities />
       <InfoPiece />
+      <DownloadUs />
     </Stack>
   );
 }

@@ -35,7 +35,13 @@ const Cities = () => {
   const [show, setShow] = useState(false);
 
   return (
-    <Flex direction='column' pt='250' bgColor='blackAlpha.100' py='-1.5'>
+    <Flex
+      direction='column'
+      pt='250'
+      h='70vh'
+      bgColor='blackAlpha.100'
+      py='-1.5'
+    >
       <Text
         pt='10'
         fontSize='5xl'
@@ -46,7 +52,7 @@ const Cities = () => {
         Explore cities where you find iWolt
       </Text>
       <Text fontSize='3xl' fontWeight='semibold' textAlign='center'>
-        Gr Greece
+        {!show && 'Gr Greece'}
       </Text>
       <Flex justifyContent='flex-end' w='full'>
         <Flex direction='column' w='full'>
