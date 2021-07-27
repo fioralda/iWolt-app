@@ -33,7 +33,7 @@ const NavBar = () => {
             </Flex>
           }
         />
-        <Input type='text' placeholder='Search' bgColor='white'/>
+        <Input type='text' placeholder='Search' bgColor='white' />
       </InputGroup>
       <Stack direction='row' spacing='4' ml='150' pt='-1.5'>
         <Button variant='ghost' onClick={login.onOpen}>

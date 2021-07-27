@@ -17,8 +17,15 @@ import {
 } from '@chakra-ui/react';
 import { FaFacebook, FaTwitter } from 'react-icons/fa';
 import icon from '../../assets/icon.png';
+import { useHistory } from 'react-router-dom';
 
 const SignUp = ({ isOpen, onClose }) => {
+  const history = useHistory();
+
+  const signUpHandler = (e) => {
+    e.preventDefault();
+    history.push('/signup');
+  };
   return (
     <Modal isOpen={isOpen} onClose={onClose}>
       <ModalOverlay />
@@ -60,18 +67,21 @@ const SignUp = ({ isOpen, onClose }) => {
                   <Text textAlign='center' padding='3'>
                     -or Log in with Email-
                   </Text>
-                  <InputGroup>
-                    <InputLeftElement pointerEvents='none' />
-                    <Input type='email' placeholder='Email' p='2' />
-                  </InputGroup>
                 </Flex>
               </HStack>
             </Flex>
           </InputGroup>
         </ModalBody>
         <ModalFooter>
-          <Button colorScheme='blue' mr={170} onClick={onClose}>
-            Next
+          <Button
+            colorScheme='red'
+            mr={120}
+            onClick={signUpHandler}
+            px='0.5vw'
+            alignContent='center'
+            bgColor='red.700'
+          >
+            Continue with Email
           </Button>
         </ModalFooter>
       </ModalContent>
