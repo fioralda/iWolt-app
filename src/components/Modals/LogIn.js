@@ -43,57 +43,47 @@ const LogIn = ({ isOpen, onClose }) => {
             <Flex>
               <HStack>
                 <Flex direction='column' pl='20' pt='3'>
-                  <Link href='https://www.facebook.com/' isExternal>
-                    <Button
-                      colorScheme='facebook'
-                      leftIcon={<FaFacebook />}
-                      margin='1'
-                      padding='5'
-                      pl='4'
-                    >
-                      <Text>Continue with Facebook</Text>
-                    </Button>
-                  </Link>
-                  <Link href='https://twitter.com/?lang=en' isExternal>
-                    <Button
-                      colorScheme='twitter'
-                      leftIcon={<FaTwitter />}
-                      margin='1'
-                      padding='5'
-                      pl='9'
-                    >
-                      <Text>Continue with Twitter</Text>
-                    </Button>
-                  </Link>
-                  <Link href='https://accounts.google.com/'>
-                    <Button margin='1' padding='5' pl='5'>
-                      <Image src={icon} alt='icon' w='5' h='5' margin='2' />
-                      <Text Textalign='center'>Continue with Google</Text>
-                    </Button>
-                  </Link>
+                  <Button
+                    colorScheme='facebook'
+                    leftIcon={<FaFacebook />}
+                    margin='1'
+                    padding='5'
+                    pl='5'
+                  >
+                    Continue with Facebook
+                  </Button>
+                  <Button
+                    colorScheme='twitter'
+                    leftIcon={<FaTwitter />}
+                    margin='1'
+                    padding='5'
+                    pl='1'
+                  >
+                    Continue with Twitter
+                  </Button>
+                  <Button margin='1' padding='5' pl='-1.5'>
+                    <Image src={icon} alt='icon' w='5' h='5' margin='2' />{' '}
+                    Continue with Google
+                  </Button>
                   <Text textAlign='center' padding='3'>
                     -or Log in with Email-
                   </Text>
-                  {/* <InputGroup>
-                    <InputLeftElement pointerEvents='none' />
-                    <Input type='email' placeholder='Email' p='2' />
-                  </InputGroup> */}
                 </Flex>
               </HStack>
             </Flex>
           </InputGroup>
         </ModalBody>
         <ModalFooter>
-          <Button
-            colorScheme='red'
-            mr={120}
-            onClick={loginHandler}
-            px='0.5vw'
-            alignContent='center'
-            bgColor='red.700'
-          >
-            Continue with Email
-          </Button>
+          <Flex direction='column' pt='1'>
+            <Button
+              colorScheme='red'
+              mr={120}
+              alignContent='center'
+              bgColor='red.700'
+            >
+              Continue with Email
+            </Button>
+          </Flex>
         </ModalFooter>
       </ModalContent>
     </Modal>

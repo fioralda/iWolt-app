@@ -10,7 +10,7 @@ import {
   Box,
   chakra,
 } from '@chakra-ui/react';
-import food2 from '../assets/food2.jpg';
+import food from '../assets/food.jpg';
 
 export default function LoginPage() {
   const {
@@ -44,7 +44,7 @@ export default function LoginPage() {
   };
 
   return (
-    <Box h='100vh' bgImage={food2} bgRepeat='no-repeat' bgPosition='center'>
+    <Box h='100vh' bgImage={food} bgRepeat='no-repeat' bgPosition='center' >
       <Stack px='35vw' pt='30vh'>
         <Stack boxShadow='dark-lg' rounded='lg' bg='whiteAlpha.700' p='4'>
           <Stack>

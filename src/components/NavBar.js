@@ -35,7 +35,7 @@ const NavBar = () => {
         />
         <Input type='text' placeholder='Search' bgColor='white' />
       </InputGroup>
-      <Stack direction='row' spacing='4' ml='150' pt='-1.5'>
+      <Stack direction='row' spacing='4' ml='150' >
         <Button variant='ghost' onClick={login.onOpen}>
           Login
         </Button>

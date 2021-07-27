@@ -10,7 +10,7 @@ import {
 import useInput from '../components/hooks/use-input';
 import { useState } from 'react';
 
-import food2 from '../assets/food2.jpg';
+import food from '../assets/food.jpg';
 export default function SignUpPage() {
   const {
     value: enteredFirstName,
@@ -79,7 +79,7 @@ export default function SignUpPage() {
   };
 
   return (
-    <Box h='100vh' bgImage={food2} bgRepeat='no-repeat' bgPosition='center'>
+    <Box h='100vh' bgImage={food} bgRepeat='no-repeat' bgPosition='center'>
       <Stack px='35vw' pt='30vh' pt='165'>
         <Stack boxShadow='dark-lg' rounded='lg' bg='whiteAlpha.700' p='5'>
           <Stack>
