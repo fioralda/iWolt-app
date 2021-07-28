@@ -8,10 +8,13 @@ import {
   chakra,
 } from '@chakra-ui/react';
 import useInput from '../components/hooks/use-input';
-import { useState } from 'react';
 
 import food from '../assets/food.jpg';
+
+import getFirebase from '../firebase';
+
 export default function SignUpPage() {
+  const firebaseInstance = getFirebase();
   const {
     value: enteredFirstName,
     isValid: enteredFirstNameIsValid,
@@ -69,8 +72,27 @@ export default function SignUpPage() {
     formIsValid = true;
   }
 
+  const signUp = async ({ email, password }) => {
+    try {
+      if (firebaseInstance) {
+        const user = await firebaseInstance
+          .auth()
+          .createUserWithEmailAndPassword(email, password);
+        console.log('user', user);
+        alert(`Welcome ${email}!`);
+      }
+    } catch (error) {
+      console.log('error', error);
+      alert(error.message);
+    }
+  };
+
   const handleSignUp = (e) => {
     e.preventDefault();
+    signUp({
+      email: enteredEmail,
+      password: enteredPassword,
+    });
     resetFirstName();
     resetLastName();
     resetEmailInput();

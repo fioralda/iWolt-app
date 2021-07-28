@@ -1,5 +1,3 @@
-import Info from '../assets/info.png';
-
 import { Flex, Box, Text, SimpleGrid, Image } from '@chakra-ui/react';
 const InfoPiece = () => {
   return (

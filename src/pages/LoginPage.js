@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import useInput from '../components/hooks/use-input';
 
 import {
@@ -12,7 +11,11 @@ import {
 } from '@chakra-ui/react';
 import food from '../assets/food.jpg';
 
+import getFirebase from '../firebase';
+
 export default function LoginPage() {
+  const firebaseInstance = getFirebase();
+
   const {
     value: enteredEmail,
     isValid: enteredEmailIsValid,
@@ -37,14 +40,33 @@ export default function LoginPage() {
     formIsValid = true;
   }
 
+  async function inputDataHandler({ email, password }) {
+    try {
+      if (firebaseInstance) {
+        const user = await firebaseInstance
+          .auth()
+          .signInWithEmailAndPassword(email, password);
+        console.log('user', user);
+        alert(`Welcome ${email}!`);
+      }
+    } catch (error) {
+      console.log('error', error);
+      alert(error.message);
+    }
+  }
+
   const handleLogin = (e) => {
     e.preventDefault();
+    inputDataHandler({
+      email: enteredEmail,
+      password: enteredPassword,
+    });
     resetEmailInput();
     resetPasswordInput();
   };
 
   return (
-    <Box h='100vh' bgImage={food} bgRepeat='no-repeat' bgPosition='center' >
+    <Box h='100vh' bgImage={food} bgRepeat='no-repeat' bgPosition='center'>
       <Stack px='35vw' pt='30vh'>
         <Stack boxShadow='dark-lg' rounded='lg' bg='whiteAlpha.700' p='4'>
           <Stack>
