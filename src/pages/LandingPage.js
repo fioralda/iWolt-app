@@ -18,9 +18,9 @@ import Footer from '../components/Footer';
 import SpaceBetween from '../components/SpacerBetween';
 export default function LandingPage() {
   return (
-    <Stack w='full'>
-      <Flex w='full' px='250'>
-        <Image src={Logo} alt='Logo' w='100' h='100' pl='20' pb='10px' />
+    <Stack w='full' spacing='2'>
+      <Flex w='full' px='380'>
+        <Image src={Logo} alt='Logo' w='55' h='55' pl='50' pt='5' pb='2' />
         <NavBar />
       </Flex>
       <Flex
@@ -30,7 +30,6 @@ export default function LandingPage() {
         direction='column'
         p='200'
         m='10'
-        mt='-0.5'
       >
         <Flex w='full' justifyContent='left' direction='column'>
           <AnimationText />

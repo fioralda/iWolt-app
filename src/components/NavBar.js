@@ -21,10 +21,10 @@ const NavBar = () => {
   const signup = useDisclosure();
 
   return (
-    <Flex alignItems='center' w='100vw' justifyContent='space-around' px='100'>
+    <Flex alignItems='center' w='55vw' justifyContent='space-between' px='100'>
       <LogIn isOpen={login.isOpen} onClose={login.onClose} />
       <SignUp isOpen={signup.isOpen} onClose={signup.onClose} />
-      <InputGroup w='20vw' ml='150'>
+      <InputGroup w='20vw' ml='200'>
         <InputRightElement
           pointerEvents='none'
           children={
@@ -35,7 +35,7 @@ const NavBar = () => {
         />
         <Input type='text' placeholder='Search' bgColor='white' />
       </InputGroup>
-      <Stack direction='row' spacing='4' ml='150' >
+      <Stack direction='row' spacing='4' ml='170'>
         <Button variant='ghost' onClick={login.onOpen}>
           Login
         </Button>

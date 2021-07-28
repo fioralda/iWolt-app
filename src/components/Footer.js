@@ -8,8 +8,8 @@ import GooglePlay from '../assets/google-play.png';
 const Footer = () => {
   return (
     <Box>
-      <Flex bgColor='gray.100' direction='column' pl='400'>
-        <Image src={Logo} alt='Logo' boxSize='100px' />
+      <Flex bgColor='gray.100' direction='column' pl='400' pt='10'>
+        <Image src={Logo} alt='Logo' w='20' h='25' />
         <Spacer />
         <Flex>
           <Flex fontWeight='bold' fontSize='md'>
