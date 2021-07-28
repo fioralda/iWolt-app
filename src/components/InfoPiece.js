@@ -1,7 +1,8 @@
 import { Flex, Box, Text, SimpleGrid, Image } from '@chakra-ui/react';
+
 const InfoPiece = () => {
   return (
-    <Flex h='38vh' px='30vw' py='10vh'>
+    <Flex h='30vh' px='30vw' py='10vh'>
       <Text
         color='black'
         fontSize='2xl'

@@ -14,6 +14,8 @@ import FindJob from '../components/FindJob';
 import card_one from '../assets/card_one.png';
 import card_two from '../assets/card_two.png';
 import card_three from '../assets/card-three.png';
+import Footer from '../components/Footer';
+import SpaceBetween from '../components/SpacerBetween';
 export default function LandingPage() {
   return (
     <Stack w='full'>
@@ -47,6 +49,7 @@ export default function LandingPage() {
         <Spacer />
       </Flex>
       <Cities />
+      <SpaceBetween />
       <InfoPiece />
       <DownloadUs />
       <Flex justifyContent='center'>
@@ -75,6 +78,7 @@ export default function LandingPage() {
           titleChange='Enter a new chapter and find a job at Wolt'
         />
       </HStack>
+      <Footer />
     </Stack>
   );
 }

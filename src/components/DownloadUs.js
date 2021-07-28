@@ -6,7 +6,7 @@ import AppStore from '../assets/app-store.png';
 
 const DownloadUs = () => {
   return (
-    <Flex bgColor='orange.100'>
+    <Flex bgColor='gray.100'>
       <Image src={frontCells} w='2500' h='800' margin='50' padding='20' />
       <Flex direction='column'>
         <Text

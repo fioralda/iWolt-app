@@ -39,7 +39,7 @@ const Cities = () => {
       direction='column'
       pt='250'
       h='70vh'
-      bgColor='blackAlpha.100'
+      // bgColor='purple.50'
       py='-1.5'
     >
       <Text
