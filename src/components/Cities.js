@@ -37,8 +37,8 @@ const Cities = () => {
   return (
     <Flex
       direction='column'
-      pt='250'
-      h='70vh'
+      pt='20'
+      h='75vh'
       // bgColor='purple.50'
       py='-1.5'
     >

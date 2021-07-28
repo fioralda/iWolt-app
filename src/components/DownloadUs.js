@@ -6,8 +6,8 @@ import AppStore from '../assets/app-store.png';
 
 const DownloadUs = () => {
   return (
-    <Flex bgColor='gray.100'>
-      <Image src={frontCells} w='2500' h='800' margin='50' padding='20' />
+    <Flex bgColor='gray.100' px='-20'>
+      <Image src={frontCells} w='3900' h='800'  />
       <Flex direction='column'>
         <Text
           pt='250'
@@ -15,12 +15,13 @@ const DownloadUs = () => {
           fontFamily="'Patua One', cursive"
           fontWeight='bold'
           textAlign='left'
+          pl='140'
         >
           <Image src={Hungry} pl='150' pb='9' />
           Honey, we're not
           <br /> cooking tonight!
         </Text>
-        <Text pt='5' textAlign='left'>
+        <Text pt='5' textAlign='left' pl='20'>
           <p>
             Get the Apple-awarded Wolt app and choose from 40,000 restaurants
             <br />
@@ -29,7 +30,7 @@ const DownloadUs = () => {
             you.
           </p>
         </Text>
-        <Flex direction='column' alignItems='center'>
+        <Flex direction='column' alignItems='center' pl='10'>
           <Flex p='2'>
             <Link
               href='https://apps.apple.com/fi/app/wolt/id943905271'
