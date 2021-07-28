@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import useInput from '../components/hooks/use-input';
 
 import {
@@ -11,10 +12,17 @@ import {
 } from '@chakra-ui/react';
 import food from '../assets/food.jpg';
 
-import getFirebase from '../firebase';
-
+import useAuthStore from '../stores/use-auth';
+import { useHistory } from 'react-router';
 export default function LoginPage() {
-  const firebaseInstance = getFirebase();
+  const { login, isAuthenticated, error } = useAuthStore();
+  const history = useHistory();
+
+  useEffect(() => {
+    if (isAuthenticated) {
+      history.push('/stores');
+    }
+  }, [isAuthenticated]);
 
   const {
     value: enteredEmail,
@@ -40,31 +48,18 @@ export default function LoginPage() {
     formIsValid = true;
   }
 
-  async function inputDataHandler({ email, password }) {
-    try {
-      if (firebaseInstance) {
-        const user = await firebaseInstance
-          .auth()
-          .signInWithEmailAndPassword(email, password);
-        console.log('user', user);
-        alert(`Welcome ${email}!`);
-      }
-    } catch (error) {
-      console.log('error', error);
-      alert(error.message);
-    }
-  }
-
-  const handleLogin = (e) => {
+  const handleLogin = async (e) => {
     e.preventDefault();
-    inputDataHandler({
-      email: enteredEmail,
-      password: enteredPassword,
-    });
+    await login(enteredEmail, enteredPassword);
     resetEmailInput();
     resetPasswordInput();
   };
 
+  useEffect(() => {
+    if (error) {
+      alert(error);
+    }
+  }, [error]);
   return (
     <Box h='100vh' bgImage={food} bgRepeat='no-repeat' bgPosition='center'>
       <Stack px='35vw' pt='30vh'>

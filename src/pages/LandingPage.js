@@ -16,6 +16,7 @@ import card_two from '../assets/card_two.png';
 import card_three from '../assets/card-three.png';
 import Footer from '../components/Footer';
 import SpaceBetween from '../components/SpacerBetween';
+
 export default function LandingPage() {
   return (
     <Stack w='full' spacing='2'>

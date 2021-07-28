@@ -23,7 +23,7 @@ const DownloadUs = () => {
         </Text>
         <Text pt='5' textAlign='left' pl='20'>
           <p>
-            Get the Apple-awarded Wolt app and choose from 40,000 restaurants
+            Get the Apple-awarded iWolt app and choose from 40,000 restaurants
             <br />
             and hundreds of stores in 20+ countries. <br />
             Discover and get what you want – our courier partners bring it to
