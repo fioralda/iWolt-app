@@ -7,8 +7,13 @@ import Cities from '../components/Cities';
 import InfoPiece from '../components/InfoPiece';
 import AnimationText from '../components/AnimationText';
 
-import { Image, Box, Flex, Spacer, Stack } from '@chakra-ui/react';
-import DownloadUs from '../components/Modals/DownloadUs';
+import { Image, Flex, Spacer, Stack, HStack, Text } from '@chakra-ui/react';
+import DownloadUs from '../components/DownloadUs';
+import FindJob from '../components/FindJob';
+
+import card_one from '../assets/card_one.png';
+import card_two from '../assets/card_two.png';
+import card_three from '../assets/card-three.png';
 export default function LandingPage() {
   return (
     <Stack w='full'>
@@ -44,6 +49,32 @@ export default function LandingPage() {
       <Cities />
       <InfoPiece />
       <DownloadUs />
+      <Flex justifyContent='center'>
+        <Text
+          pb='10'
+          pt='40'
+          fontSize='5xl'
+          fontFamily="'Patua One', cursive"
+          fontWeight='bold'
+          textAlign='center'
+        >
+          Hungry from more than food?
+        </Text>
+      </Flex>
+      <HStack spacing='5' justifyContent='center' pb='20'>
+        <FindJob
+          imageUrl={card_one}
+          titleChange='Get paid as courier partner'
+        />
+        <FindJob
+          imageUrl={card_two}
+          titleChange='Serve more people as a restaurant partner'
+        />
+        <FindJob
+          imageUrl={card_three}
+          titleChange='Enter a new chapter and find a job at Wolt'
+        />
+      </HStack>
     </Stack>
   );
 }

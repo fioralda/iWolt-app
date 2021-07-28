@@ -1,16 +1,8 @@
-import frontCells from '../../assets/front-cells.png';
-import {
-  Flex,
-  Box,
-  Text,
-  SimpleGrid,
-  Image,
-  Button,
-  Link,
-} from '@chakra-ui/react';
-import Hungry from '../../assets/hungry.png';
-import GooglePlay from '../../assets/google-play.png';
-import AppStore from '../../assets/app-store.png';
+import frontCells from '../assets/front-cells.png';
+import { Flex, Text, Image, Button, Link } from '@chakra-ui/react';
+import Hungry from '../assets/hungry.png';
+import GooglePlay from '../assets/google-play.png';
+import AppStore from '../assets/app-store.png';
 
 const DownloadUs = () => {
   return (
