@@ -2,7 +2,8 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import LandingPage from './pages/LandingPage';
 import LoginPage from './pages/LoginPage';
 import RegisterPage from './pages/RegisterPage';
-import Stores from './pages/Stores';
+import StoresNav from './pages/StoresNav';
+import StoresCard from './pages/StoresCard';
 import PageNotFound from './pages/PageNotFound';
 
 import useAuthStore from './stores/use-auth';
@@ -23,7 +24,7 @@ function App() {
         </Route>
         {isAuthenticated && (
           <Route exact path='/stores'>
-            <Stores />
+            <StoresNav />
           </Route>
         )}
         <Route path=''>

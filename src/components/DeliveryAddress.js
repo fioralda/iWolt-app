@@ -3,7 +3,7 @@ import { Input, Flex, Button, Text } from '@chakra-ui/react';
 const DeliveryAddress = () => {
   return (
     <Flex
-      w={{ md: '10vw', lg: '25vw' }}
+      w={{ md: '35vw', lg: '25vw' }}
       direction='column'
       alignItems='center'
       pt='14'
