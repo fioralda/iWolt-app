@@ -1,50 +1,38 @@
 [
   {
     "name": "Alice | Ibn Gvirol",
-    "decsription": "Wonderful Ice Cream",
-    "imageUrl": "shop-1.jpg",
+    "decsription": "Souvlaki (11)",
+    "imageUrl": "image1.jpg-md",
     "time": "10-20"
   },
   {
     "name": "Alice | Ibn Gvirol",
-    "decsription": "Wonderful Ice Cream",
-    "imageUrl": "shop-1.jpg",
+    "decsription": "Burger (16)",
+    "imageUrl": "image2.jpg-md",
     "time": "10-20"
   },
   {
     "name": "Alice | Ibn Gvirol",
-    "decsription": "Wonderful Ice Cream",
-    "imageUrl": "shop-1.jpg",
+    "decsription": "Sushi (4)",
+    "imageUrl": "image3.jpg-md",
     "time": "10-20"
   },
   {
     "name": "Alice | Ibn Gvirol",
-    "decsription": "Wonderful Ice Cream",
-    "imageUrl": "shop-1.jpg",
+    "decsription": "Cafe (30)",
+    "imageUrl": "image4.jpg-md",
     "time": "10-20"
   },
   {
     "name": "Alice | Ibn Gvirol",
-    "decsription": "Wonderful Ice Cream",
-    "imageUrl": "shop-1.jpg",
+    "decsription": "Dessert (19)",
+    "imageUrl": "image5.jpg-md",
     "time": "10-20"
   },
   {
     "name": "Alice | Ibn Gvirol",
-    "decsription": "Wonderful Ice Cream",
-    "imageUrl": "shop-1.jpg",
-    "time": "10-20"
-  },
-  {
-    "name": "Alice | Ibn Gvirol",
-    "decsription": "Wonderful Ice Cream",
-    "imageUrl": "shop-1.jpg",
-    "time": "10-20"
-  },
-  {
-    "name": "Alice | Ibn Gvirol",
-    "decsription": "Wonderful Ice Cream",
-    "imageUrl": "shop-1.jpg",
+    "decsription": "Chinese (4)",
+    "imageUrl": "image6.jpg-md",
     "time": "10-20"
   }
 ]

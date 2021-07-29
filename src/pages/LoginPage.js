@@ -61,7 +61,13 @@ export default function LoginPage() {
     }
   }, [error]);
   return (
-    <Box h='100vh' bgImage={food} bgRepeat='no-repeat' bgPosition='center'>
+    <Box
+      h='100vh'
+      w='100vw'
+      bgImage={food}
+      bgRepeat='no-repeat'
+      bgPosition='center'
+    >
       <Stack px='35vw' pt='30vh'>
         <Stack boxShadow='dark-lg' rounded='lg' bg='whiteAlpha.700' p='4'>
           <Stack>

@@ -6,7 +6,6 @@ const DeliveryAddress = () => {
       w={{ md: '35vw', lg: '25vw' }}
       direction='column'
       alignItems='center'
-      pt='14'
       boxShadow='dark-lg'
       p='6'
       rounded='lg'

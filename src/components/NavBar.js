@@ -1,3 +1,6 @@
+import { useEffect } from 'react';
+import { useHistory } from 'react-router';
+
 import {
   InputGroup,
   Input,
@@ -11,20 +14,34 @@ import {
   MenuItem,
   Box,
   useDisclosure,
+  Image,
+  Avatar,
 } from '@chakra-ui/react';
 import { SearchIcon, ChevronDownIcon } from '@chakra-ui/icons';
-
+import Logo from '../assets/logo.png';
 import LogIn from './Modals/LogIn';
 import SignUp from './Modals/SignUp';
+import useAuthStore from '../stores/use-auth';
 const NavBar = () => {
   const login = useDisclosure();
   const signup = useDisclosure();
+  const { isAuthenticated, email, logout } = useAuthStore();
+  const history = useHistory();
+
+  useEffect(() => {
+    if (!isAuthenticated) {
+      history.push('/');
+    }
+  }, [isAuthenticated]);
 
   return (
-    <Flex alignItems='center' w='55vw' justifyContent='space-between' px='100'>
+    <Flex shadow='md' pb='3' alignItems='center' w='100vw' justifyContent='space-evenly' pt='2'>
       <LogIn isOpen={login.isOpen} onClose={login.onClose} />
       <SignUp isOpen={signup.isOpen} onClose={signup.onClose} />
-      <InputGroup w='20vw' ml='200'>
+      <Box>
+        <Image src={Logo} w='35' h='27' />
+      </Box>
+      <InputGroup w='15vw' pl='10'>
         <InputRightElement
           pointerEvents='none'
           children={
@@ -35,32 +52,49 @@ const NavBar = () => {
         />
         <Input type='text' placeholder='Search' bgColor='white' />
       </InputGroup>
-      <Stack direction='row' spacing='4' ml='170'>
-        <Button variant='ghost' onClick={login.onOpen}>
-          Login
-        </Button>
-        <Button variant='ghost' onClick={signup.onOpen}>
-          Sign up
-        </Button>
-        <Menu>
-          <MenuButton
-            as={Button}
-            variant='ghost'
-            px={4}
-            py={2}
-            transition='all 0.2s'
-            borderRadius='md'
-            _expanded={{ bg: 'blue.100' }}
-            _focus={{ boxShadow: 'outline' }}
-          >
-            Language <ChevronDownIcon />
-          </MenuButton>
-          <MenuList>
-            <MenuItem>English</MenuItem>
-            <MenuItem>Greek</MenuItem>
-          </MenuList>
-        </Menu>
-      </Stack>
+      {!isAuthenticated && (
+        <Stack direction='row'>
+          <Button variant='ghost' onClick={login.onOpen}>
+            Login
+          </Button>
+          <Button variant='ghost' onClick={signup.onOpen}>
+            Sign up
+          </Button>
+          <Menu>
+            <MenuButton
+              as={Button}
+              variant='ghost'
+              px={4}
+              py={2}
+              transition='all 0.2s'
+              borderRadius='md'
+              _expanded={{ bg: 'blue.100' }}
+              _focus={{ boxShadow: 'outline' }}
+            >
+              Language <ChevronDownIcon />
+            </MenuButton>
+            <MenuList>
+              <MenuItem>English</MenuItem>
+              <MenuItem>Greek</MenuItem>
+            </MenuList>
+          </Menu>
+        </Stack>
+      )}
+      {isAuthenticated && (
+        <Stack direction='row'>
+          <Menu>
+            <Menu size='sm'>
+              <MenuButton>
+                <Avatar name={email} src={''} size='sm' />
+              </MenuButton>
+              <MenuList>
+                <MenuItem>Profile</MenuItem>
+                <MenuItem onClick={logout}>Logout</MenuItem>
+              </MenuList>
+            </Menu>
+          </Menu>
+        </Stack>
+      )}
     </Flex>
   );
 };

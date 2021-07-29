@@ -19,32 +19,18 @@ import SpaceBetween from '../components/SpacerBetween';
 
 export default function LandingPage() {
   return (
-    <Stack w='full' spacing='2'>
-      <Flex w='full' px='380'>
-        <Image src={Logo} alt='Logo' w='55' h='55' pl='50' pt='5' pb='2' />
-        <NavBar />
-      </Flex>
+    <Stack w='100vw'>
       <Flex
         bgImage={food_one}
-        h='800'
+        h='80vh'
         justifyContent='flex-end'
         direction='column'
         p='250'
-        m='10'
       >
-        <Flex w='full' justifyContent='left' direction='column'>
+        <>
           <AnimationText />
           <DeliveryAddress />
-        </Flex>
-      </Flex>
-      <Flex p='6' alignItems='center' bgColor='white'>
-        <Flex
-          direction='column'
-          justifyContent='center'
-          justifyItems='center'
-          alignItems='center'
-        ></Flex>
-        <Spacer />
+        </>
       </Flex>
       <Cities />
       <SpaceBetween />
@@ -76,7 +62,6 @@ export default function LandingPage() {
           titleChange='Enter a new chapter and find a job at Wolt'
         />
       </HStack>
-      <Footer />
     </Stack>
   );
 }

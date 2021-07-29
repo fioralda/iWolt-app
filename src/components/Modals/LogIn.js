@@ -21,6 +21,7 @@ const LogIn = ({ isOpen, onClose }) => {
   const history = useHistory();
 
   const loginHandler = (e) => {
+    onClose();
     e.preventDefault();
     history.push('/login');
   };

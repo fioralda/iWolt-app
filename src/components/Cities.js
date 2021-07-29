@@ -1,6 +1,16 @@
 import { useState } from 'react';
 
-import { Flex, Text, SimpleGrid, Tabs, TabList, Tab } from '@chakra-ui/react';
+import {
+  Stack,
+  Flex,
+  Text,
+  SimpleGrid,
+  Tabs,
+  TabList,
+  Tab,
+  Box,
+  chakra,
+} from '@chakra-ui/react';
 import CityButton from './CityButton';
 import CountryButton from './CountryButton';
 
@@ -35,29 +45,23 @@ const Cities = () => {
   const [show, setShow] = useState(false);
 
   return (
-    <Flex
-      direction='column'
-      pt='20'
-      h='75vh'
-      // bgColor='purple.50'
-      py='-1.5'
-    >
+    <Box h='70vh'>
       <Text
-        pt='10'
         fontSize='5xl'
         fontFamily="'Patua One', cursive"
         fontWeight='bold'
         textAlign='center'
+        mt='40'
       >
         Explore cities where you find iWolt
       </Text>
       <Text fontSize='3xl' fontWeight='semibold' textAlign='center'>
         {!show && 'Gr Greece'}
       </Text>
-      <Flex justifyContent='flex-end' w='full'>
-        <Flex direction='column' w='full'>
+      <Flex justifyContent='center'>
+        <Flex direction='column'>
           <Tabs variant='enclosed'>
-            <Flex justifyContent='center' pt={`${show ? '52' : '40'}`}>
+            <Flex justifyContent='center' mt={`${show ? '52' : '40'}`}>
               <TabList>
                 <Tab onClick={() => setShow(false)}>Greece</Tab>
                 <Tab onClick={() => setShow(true)}>All countries</Tab>
@@ -84,13 +88,7 @@ const Cities = () => {
           </Tabs>
         </Flex>
       </Flex>
-      <Flex
-        justifyContent={{ md: 'space-between', lg: 'space-around' }}
-        px='150'
-        pt='5'
-        pb='80'
-      ></Flex>
-    </Flex>
+    </Box>
   );
 };
 

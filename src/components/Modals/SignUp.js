@@ -22,6 +22,7 @@ const SignUp = ({ isOpen, onClose }) => {
   const history = useHistory();
 
   const signUpHandler = (e) => {
+    onClose();
     e.preventDefault();
     history.push('/signup');
   };
