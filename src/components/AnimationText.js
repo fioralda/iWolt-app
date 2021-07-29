@@ -21,7 +21,7 @@ const AnimationText = () => {
   }, []);
 
   return (
-    <Flex pb='10' fontSize='4xl' fontWeight='bold'>
+    <Flex pb='10' fontSize='5xl' fontWeight='extrabold'>
       <TextTransition
         text={TEXTS[index % TEXTS.length]}
         springConfig={presets.wobbly}

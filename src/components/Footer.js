@@ -13,17 +13,17 @@ import footer_twitter from '../assets/footer_twitter.svg';
 const Footer = () => {
   return (
     <Box>
-      <Flex bgColor='gray.100' direction='column' pl='400' pt='10' pb='20'>
+      <Flex bgColor='gray.100' direction='column' pl='400' pt='20' pb='10'>
         <Image src={Logo} alt='Logo' w='20' h='30' />
         <Spacer />
         <Flex>
-          <Flex fontWeight='bold' fontSize='md'>
+          <Flex fontWeight='bold' fontSize='md' pt='8'>
             <Text>Download the app</Text>
           </Flex>
           {/* <Spacer /> */}
           <Flex pl='60'>
             <List fontSize='sm'>
-              <Text fontWeight='bold' pb='2' fontSize='md'>
+              <Text fontWeight='bold' pb='2' fontSize='md' pt='8' pb='5'>
                 Let's do this together
               </Text>
               <ListItem>For couriers</ListItem>
@@ -35,7 +35,7 @@ const Footer = () => {
           </Flex>
           <Flex pl='60'>
             <List fontSize='sm'>
-              <Text fontWeight='bold' pb='2' fontSize='md'>
+              <Text fontWeight='bold' pb='2' fontSize='md' pt='8' pb='5'>
                 iWolt links
               </Text>
               <ListItem>Contact</ListItem>
@@ -50,7 +50,7 @@ const Footer = () => {
           </Flex>
         </Flex>
         <Flex direction='column'>
-          <Flex p='2' pb='15'>
+          <Flex p='2'>
             <Link
               href='https://apps.apple.com/fi/app/wolt/id943905271'
               isExternal

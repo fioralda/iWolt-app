@@ -1,6 +1,6 @@
 import React from 'react';
 import Logo from '../assets/logo.png';
-import food from '../assets/food.jpg';
+import food_one from '../assets/food_one.jpg';
 import NavBar from '../components/NavBar';
 import DeliveryAddress from '../components/DeliveryAddress';
 import Cities from '../components/Cities';
@@ -25,11 +25,11 @@ export default function LandingPage() {
         <NavBar />
       </Flex>
       <Flex
-        bgImage={food}
+        bgImage={food_one}
         h='800'
         justifyContent='flex-end'
         direction='column'
-        p='200'
+        p='250'
         m='10'
       >
         <Flex w='full' justifyContent='left' direction='column'>
@@ -43,9 +43,7 @@ export default function LandingPage() {
           justifyContent='center'
           justifyItems='center'
           alignItems='center'
-        >
-          {/* <DeliveryAddress /> */}
-        </Flex>
+        ></Flex>
         <Spacer />
       </Flex>
       <Cities />
