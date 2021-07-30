@@ -51,10 +51,7 @@ const Footer = () => {
         </Flex>
         <Flex direction='column'>
           <Flex p='2'>
-            <Link
-              href='https://apps.apple.com/fi/app/wolt/id943905271'
-              isExternal
-            >
+            <Link href='https://www.apple.com/fi/app-store/' isExternal>
               <Button px='6' colorScheme='blackAlpha'>
                 <Image src={AppStore} alt='icon' w='5' h='5' margin='2' />
                 App Store
@@ -62,10 +59,7 @@ const Footer = () => {
             </Link>
           </Flex>
           <Flex p='2'>
-            <Link
-              href='https://play.google.com/store/apps/details?id=com.wolt.android'
-              isExternal
-            >
+            <Link href='https://play.google.com/store' isExternal>
               <Button colorScheme='blackAlpha'>
                 <Image
                   src={GooglePlay}
@@ -86,7 +80,7 @@ const Footer = () => {
             Accessibility statement
           </Text>
           <Text pr='20'>Terms and conditions</Text>
-          <Stack direction='row' spacing='6' pb='2' pl='-1.5'>
+          <Stack direction='row' spacing='6' pl='-1.5'>
             <Image src={footer_facebook} w='7' h='7' />
             <Image src={footer_instagram} w='7' h='7' />
             <Image src={footer_linkedin} w='7' h='7' />

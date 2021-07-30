@@ -17,6 +17,7 @@ import {
   Image,
   Avatar,
 } from '@chakra-ui/react';
+import { NavLink } from 'react-router-dom';
 import { SearchIcon, ChevronDownIcon } from '@chakra-ui/icons';
 import Logo from '../assets/logo.png';
 import LogIn from './Modals/LogIn';
@@ -35,13 +36,23 @@ const NavBar = () => {
   }, [isAuthenticated]);
 
   return (
-    <Flex shadow='md' pb='3' alignItems='center' w='100vw' justifyContent='space-evenly' pt='2'>
+    <Flex
+      shadow='md'
+      pb='2'
+      alignItems='center'
+      w='100vw'
+      justifyContent='space-evenly'
+      pt='2'
+      pl='4'
+    >
       <LogIn isOpen={login.isOpen} onClose={login.onClose} />
       <SignUp isOpen={signup.isOpen} onClose={signup.onClose} />
       <Box>
-        <Image src={Logo} w='35' h='27' />
+        <NavLink to={'/'}>
+          <Image src={Logo} w='35' h='27' />
+        </NavLink>
       </Box>
-      <InputGroup w='15vw' pl='10'>
+      <InputGroup w='15vw' pl='5'>
         <InputRightElement
           pointerEvents='none'
           children={

@@ -8,7 +8,6 @@ import {
   Link,
   chakra,
 } from '@chakra-ui/react';
-import { getByLabelText } from '@testing-library/react';
 
 const StoresCard = ({ imageUrl, name }) => {
   return (
@@ -32,12 +31,6 @@ const StoresCard = ({ imageUrl, name }) => {
           >
             {name}
           </Link>
-          {/* <chakra.span
-            fontSize='sm'
-            color={useColorModeValue('gray.700', 'gray.200')}
-          >
-            Software Engineer
-          </chakra.span> */}
         </Box>
       </Box>
     </Flex>

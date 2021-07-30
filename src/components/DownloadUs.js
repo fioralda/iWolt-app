@@ -7,7 +7,7 @@ import AppStore from '../assets/app-store.png';
 const DownloadUs = () => {
   return (
     <Flex bgColor='gray.100' px='-20'>
-      <Image src={frontCells} w='3900' h='800'  />
+      <Image src={frontCells} w='3900' h='800' />
       <Flex direction='column'>
         <Text
           pt='250'
@@ -32,10 +32,7 @@ const DownloadUs = () => {
         </Text>
         <Flex direction='column' alignItems='center' pl='10'>
           <Flex p='2'>
-            <Link
-              href='https://apps.apple.com/fi/app/wolt/id943905271'
-              isExternal
-            >
+            <Link href='https://www.apple.com/fi/app-store/' isExternal>
               <Button px='6' colorScheme='blackAlpha'>
                 <Image src={AppStore} alt='icon' w='5' h='5' margin='2' />
                 App Store
@@ -43,10 +40,7 @@ const DownloadUs = () => {
             </Link>
           </Flex>
           <Flex p='2'>
-            <Link
-              href='https://play.google.com/store/apps/details?id=com.wolt.android'
-              isExternal
-            >
+            <Link href='https://play.google.com/store' isExternal>
               <Button colorScheme='blackAlpha'>
                 <Image
                   src={GooglePlay}

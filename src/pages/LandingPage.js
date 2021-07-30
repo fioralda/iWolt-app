@@ -1,31 +1,28 @@
 import React from 'react';
-import Logo from '../assets/logo.png';
-import food_one from '../assets/food_one.jpg';
-import NavBar from '../components/NavBar';
+import food from '../assets/food.jpg';
 import DeliveryAddress from '../components/DeliveryAddress';
 import Cities from '../components/Cities';
 import InfoPiece from '../components/InfoPiece';
 import AnimationText from '../components/AnimationText';
 
-import { Image, Flex, Spacer, Stack, HStack, Text } from '@chakra-ui/react';
+import {Flex, Stack, HStack, Text } from '@chakra-ui/react';
 import DownloadUs from '../components/DownloadUs';
 import FindJob from '../components/FindJob';
 
 import card_one from '../assets/card_one.png';
 import card_two from '../assets/card_two.png';
 import card_three from '../assets/card-three.png';
-import Footer from '../components/Footer';
 import SpaceBetween from '../components/SpacerBetween';
 
 export default function LandingPage() {
   return (
     <Stack w='100vw'>
       <Flex
-        bgImage={food_one}
-        h='80vh'
+        bgImage={food}
+        h='85vh'
         justifyContent='flex-end'
         direction='column'
-        p='250'
+        p='350'
       >
         <>
           <AnimationText />

@@ -1,5 +1,7 @@
 import { useEffect } from 'react';
 
+import { useHistory } from 'react-router';
+
 import {
   Flex,
   Stack,
@@ -14,7 +16,9 @@ import useAuthStore from '../stores/use-auth';
 import food from '../assets/food.jpg';
 
 export default function RegisterPage() {
-  const { register, error } = useAuthStore();
+  const { register, isAuthenticated, error } = useAuthStore();
+  const history = useHistory();
+
   const {
     value: enteredFirstName,
     isValid: enteredFirstNameIsValid,
@@ -81,6 +85,12 @@ export default function RegisterPage() {
     resetPassword();
     resetRepeatPassword();
   };
+
+  useEffect(() => {
+    if (isAuthenticated) {
+      history.push('/stores');
+    }
+  }, [isAuthenticated]);
 
   useEffect(() => {
     if (error) {
