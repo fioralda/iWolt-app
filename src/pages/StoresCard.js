@@ -1,13 +1,4 @@
-import {
-  Text,
-  Box,
-  Badge,
-  Image,
-  Flex,
-  useColorModeValue,
-  Link,
-  chakra,
-} from '@chakra-ui/react';
+import { Box, Image, Flex, useColorModeValue, Link } from '@chakra-ui/react';
 
 const StoresCard = ({ imageUrl, name }) => {
   return (
