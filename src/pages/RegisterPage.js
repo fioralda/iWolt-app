@@ -1,7 +1,5 @@
 import { useEffect } from 'react';
-
 import { useHistory } from 'react-router';
-
 import {
   Flex,
   Stack,
@@ -90,6 +88,7 @@ export default function RegisterPage() {
     if (isAuthenticated) {
       history.push('/stores');
     }
+    // eslint-disable-next-line
   }, [isAuthenticated]);
 
   useEffect(() => {
@@ -100,7 +99,7 @@ export default function RegisterPage() {
 
   return (
     <Box h='100vh' bgImage={food} bgRepeat='no-repeat' bgPosition='center'>
-      <Stack px='35vw' pt='30vh' pt='165'>
+      <Stack px='35vw' pt='165'>
         <Stack boxShadow='dark-lg' rounded='lg' bg='whiteAlpha.700' p='5'>
           <Stack>
             <Text pl='4' fontWeight='bold'>

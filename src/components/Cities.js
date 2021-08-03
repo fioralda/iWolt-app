@@ -1,7 +1,6 @@
 import { useState } from 'react';
 
 import {
-  Stack,
   Flex,
   Text,
   SimpleGrid,
@@ -9,7 +8,6 @@ import {
   TabList,
   Tab,
   Box,
-  chakra,
 } from '@chakra-ui/react';
 import CityButton from './CityButton';
 import CountryButton from './CountryButton';

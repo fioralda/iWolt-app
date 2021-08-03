@@ -33,6 +33,7 @@ const NavBar = () => {
     if (!isAuthenticated) {
       history.push('/');
     }
+    // eslint-disable-next-line
   }, [isAuthenticated]);
 
   return (

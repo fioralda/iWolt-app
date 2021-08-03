@@ -20,10 +20,9 @@ const Footer = () => {
           <Flex fontWeight='bold' fontSize='md' pt='8'>
             <Text>Download the app</Text>
           </Flex>
-          {/* <Spacer /> */}
           <Flex pl='60'>
             <List fontSize='sm'>
-              <Text fontWeight='bold' pb='2' fontSize='md' pt='8' pb='5'>
+              <Text fontWeight='bold' fontSize='md' pt='8' pb='5'>
                 Let's do this together
               </Text>
               <ListItem>For couriers</ListItem>
@@ -35,7 +34,7 @@ const Footer = () => {
           </Flex>
           <Flex pl='60'>
             <List fontSize='sm'>
-              <Text fontWeight='bold' pb='2' fontSize='md' pt='8' pb='5'>
+              <Text fontWeight='bold' fontSize='md' pt='8' pb='5'>
                 iWolt links
               </Text>
               <ListItem>Contact</ListItem>
@@ -76,7 +75,7 @@ const Footer = () => {
         </Flex>
         <Flex p='10'>
           <p>&copy; iWolt 2021</p>
-          <Text pr='25' pl='237' pr='8'>
+          <Text pr='25' pl='237' >
             Accessibility statement
           </Text>
           <Text pr='20'>Terms and conditions</Text>

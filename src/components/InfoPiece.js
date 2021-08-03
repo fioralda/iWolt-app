@@ -1,4 +1,4 @@
-import { Flex, Box, Text, SimpleGrid, Image } from '@chakra-ui/react';
+import { Flex, Text } from '@chakra-ui/react';
 
 const InfoPiece = () => {
   return (

@@ -2,33 +2,17 @@ import React, { useEffect, useState } from 'react';
 
 import useAuthStore from '../stores/use-auth';
 import StoresCard from './StoresCard';
-import {
-  Button,
-  HStack,
-  Stack,
-  Menu,
-  MenuButton,
-  MenuList,
-  MenuItem,
-  Flex,
-  Image,
-  InputGroup,
-  Input,
-  InputRightElement,
-  SimpleGrid,
-  Text,
-} from '@chakra-ui/react';
+import { Stack, Flex, SimpleGrid, Text } from '@chakra-ui/react';
 import { useHistory } from 'react-router-dom';
-import { SearchIcon, ChevronDownIcon } from '@chakra-ui/icons';
-import Logo from '../assets/logo.png';
 
 export default function StoresSection() {
-  const { email, logout, isAuthenticated } = useAuthStore();
+  const { isAuthenticated } = useAuthStore();
   const history = useHistory();
   useEffect(() => {
     if (!isAuthenticated) {
       history.push('/');
     }
+    // eslint-disable-next-line
   }, [isAuthenticated]);
 
   const [stores, setStores] = useState([]);

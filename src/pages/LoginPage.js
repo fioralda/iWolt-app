@@ -22,6 +22,7 @@ export default function LoginPage() {
     if (isAuthenticated) {
       history.push('/stores');
     }
+    // eslint-disable-next-line
   }, [isAuthenticated]);
 
   const {

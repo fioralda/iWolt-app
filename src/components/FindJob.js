@@ -1,4 +1,4 @@
-import { Box, Badge, Image } from '@chakra-ui/react';
+import { Box, Image } from '@chakra-ui/react';
 
 const FindJob = ({ imageUrl, titleChange }) => {
   const property = {
